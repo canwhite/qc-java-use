@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.Objects;
+
 
 public class Q3_List {
     public static void main(String[] args) {
@@ -115,6 +117,53 @@ public class Q3_List {
         //但是如果传入类型不匹配的数组会报错
 
 
+        //8.equils
+        
+        //List内部并不是通过==判断两个元素是否相等，而是使用equals()方法判断两个元素是否相等
+        //例如，contains的实现
+        /* public boolean contains(Object o) {
+            for (int i = 0; i < elementData.length; i++) {
+                if (o.equals(elementData[i])) {
+                    return true;
+                }
+            }
+            return false;
+        } */
+        //so: 正确使用List的contains()、indexOf()这些方法，放入的实例必须正确覆写equals()方法
+        //--总而言之，对象数组的对象也要实现equils方法
+
+        List<Person> list5 = List.of(
+            new Person("Xiao", "Ming", 18),
+            new Person("Xiao", "Hong", 25),
+            new Person("Bob", "Smith", 20)
+        );
+        boolean exist = list5.contains(new Person("Bob", "Smith", 20));
+        System.out.println(exist ? "测试成功!" : "测试失败!");
 
     }
+}
+
+
+//内部类是动态的，而main是静态的，so，如果是作为内部类存在，也需要加static，作为外部的就没问题
+//静态类和动态类放的位置都不一样
+class Person{
+    String firstName;
+    String lastName;
+    int age;
+    //构造函数
+    public Person(String firstName, String lastName,int age){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+    //实现equils方法
+    public boolean equals(Object o){
+        //instanceof作用到构造函数
+        if (o instanceof Person) {
+            Person p = (Person) o;
+            return Objects.equals(this.firstName, p.firstName) && this.age == p.age;
+        }
+        return false;
+    }
+
 }
