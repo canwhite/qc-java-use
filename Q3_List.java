@@ -168,6 +168,7 @@ class Person{
         //instanceof作用到构造函数
         if (o instanceof Person) {
             Person p = (Person) o;
+            //String是引用类型，用equals确定，基本类型用==操作
             return Objects.equals(this.firstName, p.firstName) && this.age == p.age;
         }
         return false;
