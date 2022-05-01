@@ -108,16 +108,9 @@ public class Q3_List {
         //例如我们传入Number类型的数组，返回的仍然是Number类型
         //但是如果传入类型不匹配的数组会报错
 
-
+        //7.contains,这个包含关系在处理对象数组的时候会非常有用
+        System.out.println(list2.contains("apple"));
         
-
-
-
-
-
-
-
-
 
     }
 }
