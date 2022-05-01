@@ -20,7 +20,17 @@ public class Q4_Map {
 
 
         //1.update
+        Map<String,Integer> map1 = new HashMap<>();
+        map1.put("pear", 123);
+        map1.put("apple", 123);
+        map1.put("apple", 456);
+
+        System.out.println(map1.get("apple"));
         
+
+        //遍历map
+        //keySet()方法返回的Set集合，它包含不重复的key的集合
+
 
 
 
