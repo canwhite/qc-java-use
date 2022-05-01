@@ -3,6 +3,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
+import java.util.Iterator;
 
 public class Q3_List {
     public static void main(String[] args) {
@@ -43,6 +44,8 @@ public class Q3_List {
 
 
         //1，基础使用
+        //实现List接口并非只能通过数组（即ArrayList的实现方式）来实现，
+        //另一种LinkedList通过“链表”也实现了List接口。
         List<String> list1 = new ArrayList<>();
         list1.add("apple"); // size=1
         list1.add("pear"); // size=2
@@ -58,6 +61,58 @@ public class Q3_List {
         //可以移除某个元素和移除某个索引的元素
         list1.remove("pear");
         System.out.println(list1.size());
+
+
+        //4.of方法创建List,of()方法返回的是一个只读list
+        List<String> list2 = List.of("apple", "pear", "banana");
+
+        // list2.add("xxx");
+        System.out.println("list2" + list2); 
+
+        //5.遍历
+        //(1)普通
+        for(int i =0; i<list2.size();i++){
+            String item = list2.get(i);
+            System.out.println(item);
+        }
+
+        //(2)遍历器
+        for(Iterator<String> it = list2.iterator(); it.hasNext();){
+            String s = it.next();
+            System.out.println(s);
+        }
+
+        //(3)转成ArrayList再处理
+        //Iterable接口的集合类都可以直接用for each循环来遍历
+        for(String s : list2){
+            System.out.println("item: "+s);
+        }
+
+        //6.asList和toArray();
+        //第一种 ，Object[],基本就和any[]一个样子了,这种方法会丢失信息
+        Object[] array = list2.toArray();
+        System.out.println(array.toString());
+        for (Object s : array) {
+            System.out.println(s);
+        }
+
+        //第二种方式是给toArray(T[])传入一个类型相同的Array，
+        //List内部自动把元素复制到传入的Array中：
+        List<Integer> list3 = List.of(12,34,56);
+        Integer[] arr = list3.toArray(new Integer[list3.size()]);
+        for(Integer n : arr){
+            System.out.println(n);
+        }
+        //方法的泛型参数<T>并不是List接口定义的泛型参数<E>，
+        //所以，我们实际上可以传入其他类型的数组，
+        //例如我们传入Number类型的数组，返回的仍然是Number类型
+        //但是如果传入类型不匹配的数组会报错
+
+
+        
+
+
+
 
 
 
