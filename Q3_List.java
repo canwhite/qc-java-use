@@ -63,13 +63,18 @@ public class Q3_List {
         System.out.println(list1.size());
 
 
+        
+
         //4.of方法创建List,of()方法返回的是一个只读list
         List<String> list2 = List.of("apple", "pear", "banana");
-
-        // list2.add("xxx");
+        // list2.add("xxx");//添加会报错
         System.out.println("list2" + list2); 
 
-        //5.遍历
+
+        //5.contains,这个包含关系在处理对象数组的时候会非常有用
+        System.out.println(list2.contains("apple"));
+
+        //6.遍历
         //(1)普通
         for(int i =0; i<list2.size();i++){
             String item = list2.get(i);
@@ -88,7 +93,7 @@ public class Q3_List {
             System.out.println("item: "+s);
         }
 
-        //6.asList和toArray();
+        //7.asList和toArray();
         //第一种 ，Object[],基本就和any[]一个样子了,这种方法会丢失信息
         Object[] array = list2.toArray();
         System.out.println(array.toString());
@@ -99,6 +104,7 @@ public class Q3_List {
         //第二种方式是给toArray(T[])传入一个类型相同的Array，
         //List内部自动把元素复制到传入的Array中：
         List<Integer> list3 = List.of(12,34,56);
+        //这里长度正好
         Integer[] arr = list3.toArray(new Integer[list3.size()]);
         for(Integer n : arr){
             System.out.println(n);
@@ -108,9 +114,7 @@ public class Q3_List {
         //例如我们传入Number类型的数组，返回的仍然是Number类型
         //但是如果传入类型不匹配的数组会报错
 
-        //7.contains,这个包含关系在处理对象数组的时候会非常有用
-        System.out.println(list2.contains("apple"));
-        
+
 
     }
 }
