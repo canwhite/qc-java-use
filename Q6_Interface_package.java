@@ -103,4 +103,9 @@ javac -d ../bin ming/Person.java hong/Person.java mr/jun/Arrays.java
 位于同一个包的类，可以访问包作用域的字段和方法。
 不用public、protected、private修饰的字段和方法就是包作用域
 
+//总结：这里的包和文件结构对应统一
+
 */
+
+
+//引入静态文件 import static java.lang.System.*;
