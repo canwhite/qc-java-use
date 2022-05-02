@@ -5,7 +5,7 @@ public class Q8_Threads {
 
         //新建一个Thread实例，然后调用它的start方法 
         Thread t = new Thread();
-        t.start();
+        t.start(); 
         //但是这样什么也没做就立刻结束了
         //我们希望在线程中做些事情，这时候就需要一些其他方法
 
@@ -13,7 +13,7 @@ public class Q8_Threads {
         //(1)方法一：从Thread派生一个自定义类，然后覆写run()方法
 
         Thread mt = new MyThread();
-        mt.start(); // 启动新线程
+        mt.start(); // 启动新线程--只有调用start方法才能执行新线程，单独执行run并没有效果
 
 
         //(2)方法二：创建Thread实例时，传入Runnable实例：
@@ -37,7 +37,20 @@ public class Q8_Threads {
             }
         };
         tc.start();
+        //(4)线程睡眠，sleep是个静态方法
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+
+        }
         System.out.println("main end...");
+
+
+        //(5)线程优先级，也是一个静态方法
+        //Thread.setPriority(int n) // 1~10, 默认值5
+        //优先级高的线程被操作系统调度的优先级较高，操作系统对高优先级线程可能调度更频繁，
+        //但我们决不能通过设置优先级来确保高优先级的线程一定会先执行。
+
 
 
         
