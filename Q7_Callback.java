@@ -22,7 +22,7 @@ interface CallbackService {
 class MainBusiness{
     //callback作为组合成员嵌进来
     private CallbackService callback;
-    //在执行函数中作为参数
+    //在执行函数中作为参数，思想其实和js差不多，传入callback，在需要执行的时候执行
     public void execute(CallbackService callback) {
         this.callback = callback;
         this.callBack();//callback，传进来，在这里执行
