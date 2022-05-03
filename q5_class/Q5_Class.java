@@ -1,4 +1,5 @@
-//class的顶部应该就是Object
+
+package  q5;
 public class Q5_Class {
     public static void main(String[] args) {
         Person p1 = new Person("xiao ming",20);

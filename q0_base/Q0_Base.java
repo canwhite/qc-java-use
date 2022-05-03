@@ -1,4 +1,5 @@
 //类名习惯以大写开头
+package  q3;
 public class Q0_Base{
     public static void main(String[] args){
         System.out.println("Hello, world!"); // 语句

@@ -39,7 +39,7 @@ public class Q8_Threads {
         tc.start();
         //一个线程可以等待另外一个线程结束之后再执行，比如main等待tc
         //调用join方法，也可以指定一个等待时间，超过等待时间就不再继续等待
-        // tc.join(); 
+        //tc.join();
         //(4)线程睡眠，sleep是个静态方法
         try {
             Thread.sleep(200);

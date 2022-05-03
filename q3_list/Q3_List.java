@@ -1,5 +1,4 @@
-//List在这里主要是作为类型存在
-//ArrayList是具体的实现实例
+package q3;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
