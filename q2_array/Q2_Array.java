@@ -1,9 +1,7 @@
 
-
+package q2_array;
 import java.util.Arrays;
 import java.util.Collections;
-
-
 public class Q2_Array {
     public static void main(String[] args) {
 

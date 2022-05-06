@@ -1,3 +1,4 @@
+package  q6_interface_package;
 public class Q6_Interface_Package {
     public static void main(String[] args) {
         //interface是在抽象类的基础上进一步发展来的，只定义不实现
