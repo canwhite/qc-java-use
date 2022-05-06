@@ -1,3 +1,4 @@
+package q8_threads;
 public class Q8_Threads {
     public static void main(String[] args) {
         //Java语言内置了多线程支持。当Java程序启动的时候，实际上是启动了一个JVM进程，

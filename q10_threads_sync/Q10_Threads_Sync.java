@@ -51,7 +51,7 @@ class AddThread extends Thread {
 }
 
 class  DecThread extends  Thread{
-    @Override //本质上写与不写jvm自己可以识别
+    @Override //本质上写与不写jvm自己可以识别,都算作重写
     public  void run(){
         for(int i = 0; i<100;i++){
             synchronized (Counter.lock){
