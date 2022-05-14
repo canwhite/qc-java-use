@@ -19,8 +19,6 @@ public class Q15_Threads_ReadWriteLock {
         counter.inc(1);
         System.out.println(counter.get());
 
-
-
     }
 }
 class Counter{
@@ -52,8 +50,6 @@ class Counter{
             rlock.unlock();
         }
     }
-
-
 }
 
 
