@@ -125,7 +125,7 @@ public class Q0_Base{
         int cargo = 100;
         //用valueOf装包
         Integer pack = Integer.valueOf(cargo);
-        //用xxxValue拆包
+        //用xxxValue拆包，xxx是类型的意思
         int newCargo = pack.intValue();
         System.out.println(newCargo);
 
