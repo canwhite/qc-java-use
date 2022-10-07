@@ -17,9 +17,15 @@ public class Q24_OLD_DATE_TIME {
         Date date = new Date();
         var sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.println(sdf.format(date));
+        /** 
+         * 这几种get方法有点过时了
+         * deprecated
+         */
+        /** 
         System.out.println(date.getYear() + 1900); // 必须加上1900
         System.out.println(date.getMonth() + 1); // 0~11，必须加上1
         System.out.println(date.getDate()); // 1~31，不能加1
+        */
 
         //---calendar -更方便对时间设置
         Calendar c = Calendar.getInstance();

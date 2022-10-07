@@ -29,13 +29,17 @@ public class Q25_NEW_DATE_TIME {
 
         //---指定日期时间，of方法
         LocalDate d2 = LocalDate.of(2019, 11, 30); // 2019-11-30, 注意11=11月
+        System.out.println(d2);
         LocalTime t2 = LocalTime.of(15, 16, 17); // 15:16:17
+        System.out.println(t2);
         LocalDateTime dt2 = LocalDateTime.of(2019, 11, 30, 15, 16, 17);
-
+        System.out.println(dt2);
         //---将字符串转化为LocalDateTime
         LocalDateTime dt3 = LocalDateTime.parse("2019-11-19T15:16:17");
         LocalDate d3 = LocalDate.parse("2019-11-19");
+        System.out.println(d3);
         LocalTime t3 = LocalTime.parse("15:16:17");
+        System.out.println(t3);
 
         /***
          *DateTimeFormatter
@@ -47,11 +51,13 @@ public class Q25_NEW_DATE_TIME {
 
         //---日期加减，链式操作。plusXXX，minusXXX
         LocalDateTime dt4 = dt3.plusDays(5).minusHours(3);
+        System.out.println(dt4);
 
         //---设置日期和时间 withXXX和with
         LocalDateTime dt5 = LocalDateTime.of(2019, 10, 26, 20, 30, 59);
         //日期变为31，月份变为9
         LocalDateTime dt6 = dt5.withMonth(9);
+        System.out.println(dt6);
         //还有一个通用的with可以做一些边界操作
         LocalDate nextMonthFirstDay = LocalDate.now().with(TemporalAdjusters.firstDayOfNextMonth());
         System.out.println(nextMonthFirstDay);

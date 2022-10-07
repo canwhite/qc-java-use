@@ -1,7 +1,7 @@
 package q18_atomic;
 
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
+// import java.util.concurrent.atomic.AtomicLong;
 
 public class Q18_Atomic {
     public static void main(String[] args) {
